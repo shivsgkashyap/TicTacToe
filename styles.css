@@ -1,0 +1,64 @@
+:root {
+  --bg-color: #f0eef1;
+  --black: #050505;
+  --blue: #33c3f0;
+  --red: rgb(228, 26, 103);
+  --border-radius: 8px;
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
+  --container-width: 1200px;
+  --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --border: 1px solid black;
+}
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--black);
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+
+.container {
+  width: var(--container-width);
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.game-board {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  justify-content: center;
+}
+
+.board-item {
+  border-right: var(--border);
+  border-bottom: var(--border);
+}
+
+.no-r {
+  border-right: none;
+}
+
+.no-b {
+  border-bottom: none;
+}
