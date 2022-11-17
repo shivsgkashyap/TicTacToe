@@ -31,5 +31,45 @@ const gameBoard = (() => {
 })();
 
 const displayController = (() => {
-  const fieldElements = document.querySelectorAll();
+  const fieldElements = document.querySelectorAll(".board-item");
+  const messageElement = document.getElementById("message");
+  const restartButton = document.getElementById("restart-button");
+
+  fieldElements.forEach((field) => {
+    field.addEventListener("click", handleClick);
+  });
+
+  restartButton.addEventListener("click", restartClick);
+
+  const handleClick = (e) => {
+    if (gameController.getIsOver() || e.target.textContent !== "") return;
+    gameController.playRound(parseInt(e.target.dataset.index));
+    updateGameboard();
+  };
+
+  const restartClick = () => {
+    gameBoard.reset;
+    gameController.reset;
+    updateGameboard();
+  };
+
+  const updateGameboard = () => {
+    fieldElements.forEach((element, i, fieldArray) => {
+      fieldArray[i].textContent = gameBoard.getField[i];
+    });
+  };
+
+  const setMessageElement = (message) => {
+    messageElement.textContent = message;
+  };
+
+  setResultsMessage = (winner) => {
+    if (winner === "Draw") {
+      setMessageElement("It's a draw!");
+    } else {
+      setMessageElement(`Player ${winner} wins the game!`);
+    }
+  };
+
+  return { setMessageElement, setResultsMessage };
 })();
