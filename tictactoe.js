@@ -63,7 +63,7 @@ const displayController = (() => {
     messageElement.textContent = message;
   };
 
-  setResultsMessage = (winner) => {
+  const setResultsMessage = (winner) => {
     if (winner === "Draw") {
       setMessageElement("It's a draw!");
     } else {
@@ -73,3 +73,5 @@ const displayController = (() => {
 
   return { setMessageElement, setResultsMessage };
 })();
+
+const gameController = (() => {})();
