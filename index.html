@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Raleway"
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap"
       rel="stylesheet"
-      type="text/css"
     />
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <script src="tictactoe.js" defer></script>
   </head>
   <body>
-    <div class="container">
+    <header class="header">
+      <h1 class="title">Tic-Tac-Toe</h1>
+    </header>
+    <main class="main">
+      <div class="message" id="message">Player X's turn</div>
       <div class="game-board">
-        <div class="board-item"><p></p></div>
-        <div class="board-item"><p></p></div>
-        <div class="board-item no-r"><p></p></div>
-        <div class="board-item"><p></p></div>
-        <div class="board-item"><p></p></div>
-        <div class="board-item no-r"><p></p></div>
-        <div class="board-item no-b"><p></p></div>
-        <div class="board-item no-b"><p></p></div>
-        <div class="board-item no-b no-r"><p></p></div>
+        <div class="field" data-index="0"></div>
+        <div class="field" data-index="1"></div>
+        <div class="field" data-index="2"></div>
+        <div class="field" data-index="3"></div>
+        <div class="field" data-index="4"></div>
+        <div class="field" data-index="5"></div>
+        <div class="field" data-index="6"></div>
+        <div class="field" data-index="7"></div>
+        <div class="field" data-index="8"></div>
       </div>
-    </div>
-
-    <script src="./library.js"></script>
+      <div class="center">
+        <button class="restart-button" id="restart-button">Restart</button>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Copyright © 2022 Shiv Kashyap</p>
+      <a href="https://github.com/shivsgkashyap" target="_blank">
+        <i class="fab fa-github"></i
+      ></a>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
