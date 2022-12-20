@@ -163,8 +163,8 @@ button {
   }
 
   .gameboard {
-    width: 304px;
-    height: 304px;
+    width: 100%;
+    align-items: center;
   }
 
   .field {
